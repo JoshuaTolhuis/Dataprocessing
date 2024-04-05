@@ -17,13 +17,13 @@ snakemake --cores <cores>
 | ----------- | ----------- |
 | conda       | 24.3.0      |
 | conda-forge | 24.1.2*     |
-| bioconda    | Text*       |
+| bioconda    |     *       |
 | snakemake   | 8.10.4      |
 | pbkt        | 3.1.1       |
 | pbmm2       | 1.13.1      |
 | trgt        | 0.8.0       |
-| samtools    | Text        |
-| bcftoools   | Text        |
+| samtools    | 1.19.2      |
+| bcftools    | 1.19.1      |
 
 *note : conda-forge and bioconda are optional if used by channels like this:
 
