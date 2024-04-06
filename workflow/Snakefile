@@ -1,0 +1,27 @@
+configfile: "config/config.yaml"
+
+DATA_DIR = config["data_directory"]
+
+from pathlib import Path
+import re
+
+hifi_dir = f"{DATA_DIR}/HIFI"
+fail_dir = f"{DATA_DIR}/Fail"
+
+def get_samples(directory):
+    file_list = Path(directory).glob("*.bam")
+
+    return [re.search(r"(bc\d{4})", str(x)).groups()[0] for x in file_list][:3]
+
+SAMPLES = get_samples(hifi_dir)
+
+include: "rules/merging.smk"
+include: "rules/aligning.smk"
+include: "rules/targeting.smk"
+include: "rules/sorting.smk"
+include: "rules/indexing.smk"
+include: "rules/visualising.smk"
+
+rule all:
+    input:
+       results = expand(f"{config['results_directory']}/{{sample}}.svg", sample = SAMPLES)
