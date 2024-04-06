@@ -1,0 +1,110 @@
+data_directory: /students/2023-2024/Thema11/jotolhuis_snakemake
+results_directory: /students/2023-2024/Thema11/jotolhuis_snakemake/results
+
+genome: GCA_000001405.15_GRCh38_no_alt_analysis_set.fa
+
+repeats: pathogenic_repeats.hg38.bed
+
+barcodes: barcodes.fasta
+
+repeat_id: DMPK
+
+Hifi_Samples:
+    1 : m84036_240201_205955_s2.hifi_reads.bc2001.bam
+    2 : m84036_240201_205955_s2.hifi_reads.bc2002.bam
+    3 : m84036_240201_205955_s2.hifi_reads.bc2003.bam
+    4 : m84036_240201_205955_s2.hifi_reads.bc2004.bam
+    5 : m84036_240201_205955_s2.hifi_reads.bc2005.bam
+    6 : m84036_240201_205955_s2.hifi_reads.bc2006.bam
+    7 : m84036_240201_205955_s2.hifi_reads.bc2007.bam
+    8 : m84036_240201_205955_s2.hifi_reads.bc2008.bam
+    9  : m84036_240201_205955_s2.hifi_reads.bc2009.bam
+    10 : m84036_240201_205955_s2.hifi_reads.bc2010.bam
+    11 : m84036_240201_205955_s2.hifi_reads.bc2011.bam
+    12 : m84036_240201_205955_s2.hifi_reads.bc2012.bam
+    13 : m84036_240201_205955_s2.hifi_reads.bc2013.bam
+    14 : m84036_240201_205955_s2.hifi_reads.bc2014.bam
+    15 : m84036_240201_205955_s2.hifi_reads.bc2015.bam
+    16 : m84036_240201_205955_s2.hifi_reads.bc2016.bam
+    17 : m84036_240201_205955_s2.hifi_reads.bc2017.bam
+    18 : m84036_240201_205955_s2.hifi_reads.bc2018.bam
+    19 : m84036_240201_205955_s2.hifi_reads.bc2019.bam
+    20 : m84036_240201_205955_s2.hifi_reads.bc2020.bam
+    21 : m84036_240201_205955_s2.hifi_reads.bc2021.bam
+    22 : m84036_240201_205955_s2.hifi_reads.bc2022.bam
+    23 : m84036_240201_205955_s2.hifi_reads.bc2023.bam
+    24 : m84036_240201_205955_s2.hifi_reads.bc2024.bam
+    25 : m84036_240201_205955_s2.hifi_reads.bc2025.bam
+    26 : m84036_240201_205955_s2.hifi_reads.bc2026.bam
+    27 : m84036_240201_205955_s2.hifi_reads.bc2027.bam
+    28 : m84036_240201_205955_s2.hifi_reads.bc2028.bam
+    29 : m84036_240201_205955_s2.hifi_reads.bc2029.bam
+    30 : m84036_240201_205955_s2.hifi_reads.bc2030.bam
+    31 : m84036_240201_205955_s2.hifi_reads.bc2031.bam
+    32 : m84036_240201_205955_s2.hifi_reads.bc2032.bam
+    33 : m84036_240201_205955_s2.hifi_reads.bc2033.bam
+    34 : m84036_240201_205955_s2.hifi_reads.bc2034.bam
+    35 : m84036_240201_205955_s2.hifi_reads.bc2035.bam
+    36 : m84036_240201_205955_s2.hifi_reads.bc2036.bam
+    37 : m84036_240201_205955_s2.hifi_reads.bc2037.bam
+    38 : m84036_240201_205955_s2.hifi_reads.bc2038.bam
+    39 : m84036_240201_205955_s2.hifi_reads.bc2039.bam
+    40 : m84036_240201_205955_s2.hifi_reads.bc2040.bam
+    41 : m84036_240201_205955_s2.hifi_reads.bc2041.bam
+    42 : m84036_240201_205955_s2.hifi_reads.bc2042.bam
+    43 : m84036_240201_205955_s2.hifi_reads.bc2043.bam
+    44 : m84036_240201_205955_s2.hifi_reads.bc2044.bam
+    45 : m84036_240201_205955_s2.hifi_reads.bc2045.bam
+    46 : m84036_240201_205955_s2.hifi_reads.bc2046.bam
+    47 : m84036_240201_205955_s2.hifi_reads.bc2047.bam
+    48 : m84036_240201_205955_s2.hifi_reads.bc2048.bam
+
+Fail_Samples:
+    1 : m84036_240201_205955_s2.fail_reads.bc2001.bam
+    2 : m84036_240201_205955_s2.fail_reads.bc2002.bam
+    3 : m84036_240201_205955_s2.fail_reads.bc2003.bam
+    4 : m84036_240201_205955_s2.fail_reads.bc2004.bam
+    5 : m84036_240201_205955_s2.fail_reads.bc2005.bam
+    6 : m84036_240201_205955_s2.fail_reads.bc2006.bam
+    7 : m84036_240201_205955_s2.fail_reads.bc2007.bam
+    8 : m84036_240201_205955_s2.fail_reads.bc2008.bam
+    9  : m84036_240201_205955_s2.fail_reads.bc2009.bam
+    10 : m84036_240201_205955_s2.fail_reads.bc2010.bam
+    11 : m84036_240201_205955_s2.fail_reads.bc2011.bam
+    12 : m84036_240201_205955_s2.fail_reads.bc2012.bam
+    13 : m84036_240201_205955_s2.fail_reads.bc2013.bam
+    14 : m84036_240201_205955_s2.fail_reads.bc2014.bam
+    15 : m84036_240201_205955_s2.fail_reads.bc2015.bam
+    16 : m84036_240201_205955_s2.fail_reads.bc2016.bam
+    17 : m84036_240201_205955_s2.fail_reads.bc2017.bam
+    18 : m84036_240201_205955_s2.fail_reads.bc2018.bam
+    19 : m84036_240201_205955_s2.fail_reads.bc2019.bam
+    20 : m84036_240201_205955_s2.fail_reads.bc2020.bam
+    21 : m84036_240201_205955_s2.fail_reads.bc2021.bam
+    22 : m84036_240201_205955_s2.fail_reads.bc2022.bam
+    23 : m84036_240201_205955_s2.fail_reads.bc2023.bam
+    24 : m84036_240201_205955_s2.fail_reads.bc2024.bam
+    25 : m84036_240201_205955_s2.fail_reads.bc2025.bam
+    26 : m84036_240201_205955_s2.fail_reads.bc2026.bam
+    27 : m84036_240201_205955_s2.fail_reads.bc2027.bam
+    28 : m84036_240201_205955_s2.fail_reads.bc2028.bam
+    29 : m84036_240201_205955_s2.fail_reads.bc2029.bam
+    30 : m84036_240201_205955_s2.fail_reads.bc2030.bam
+    31 : m84036_240201_205955_s2.fail_reads.bc2031.bam
+    32 : m84036_240201_205955_s2.fail_reads.bc2032.bam
+    33 : m84036_240201_205955_s2.fail_reads.bc2033.bam
+    34 : m84036_240201_205955_s2.fail_reads.bc2034.bam
+    35 : m84036_240201_205955_s2.fail_reads.bc2035.bam
+    36 : m84036_240201_205955_s2.fail_reads.bc2036.bam
+    37 : m84036_240201_205955_s2.fail_reads.bc2037.bam
+    38 : m84036_240201_205955_s2.fail_reads.bc2038.bam
+    39 : m84036_240201_205955_s2.fail_reads.bc2039.bam
+    40 : m84036_240201_205955_s2.fail_reads.bc2040.bam
+    41 : m84036_240201_205955_s2.fail_reads.bc2041.bam
+    42 : m84036_240201_205955_s2.fail_reads.bc2042.bam
+    43 : m84036_240201_205955_s2.fail_reads.bc2043.bam
+    44 : m84036_240201_205955_s2.fail_reads.bc2044.bam
+    45 : m84036_240201_205955_s2.fail_reads.bc2045.bam
+    46 : m84036_240201_205955_s2.fail_reads.bc2046.bam
+    47 : m84036_240201_205955_s2.fail_reads.bc2047.bam
+    48 : m84036_240201_205955_s2.fail_reads.bc2048.bam  
