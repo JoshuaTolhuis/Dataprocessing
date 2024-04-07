@@ -1,7 +1,7 @@
 rule trvz:
     input:
         vcf = rules.indexing.output.indexed_vcf,
-        spanning = rules.indexing.output.indexed_spanning,
+        spanning = rules.sorting.output.sorted_spanning,
         reference = f"{DATA_DIR}/{config['genome']}",
         repeats = f"{DATA_DIR}/{config['repeats']}",
     message:
