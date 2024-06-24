@@ -1,5 +1,6 @@
 configfile: "config/config.yaml"
 
+
 DATA_DIR = config["data_directory"]
 
 from pathlib import Path
