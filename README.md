@@ -36,6 +36,4 @@ conda install -c conda-forge -c bioconda <package>
 ```
 
 ## Dag.png
-[image here]
-
-##
+![image](https://github.com/JoshuaTolhuis/Dataprocessing/assets/90695997/063ae4f3-1b16-4bdb-b3c3-297107937337)
