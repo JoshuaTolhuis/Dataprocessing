@@ -1,5 +1,9 @@
 # Dataprocessing
 
+## Overview
+This pipeline was crated for a school project using snakemake and anaconda. It creates an image to showcase extended repeats to recreate the results from this research paper:  
+https://www.nature.com/articles/s41587-023-02057-3
+
 ## Usage:  
 To run the pipeline, first activate the right environment:
 ```shell
@@ -12,7 +16,7 @@ Then at last, start the pipeline by calling the main snakefile like this:
 snakemake --cores <cores>
 ```
 
-# Install in environment:  
+## Install 
 | Name        | Version     |
 | ----------- | ----------- |
 | conda       | 24.3.0      |
@@ -31,11 +35,7 @@ snakemake --cores <cores>
 conda install -c conda-forge -c bioconda <package>
 ```
 
+## Dag.png
+[image here]
 
-
-
-
-
-
-
-
+##
