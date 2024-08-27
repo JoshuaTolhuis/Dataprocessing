@@ -30,4 +30,4 @@ rule trgt:
         f"{DATA_DIR}/logs/{{sample}}.log"
 
     shell:
-        f"trgt --threads {config['trgt_threads']} --genome {{input.reference}} --reads {{input.aligned}} --repeats {{input.repeats}} --output-prefix {DATA_DIR}/aligned/{{wildcards.sample}}"
+        f"trgt --threads {config['trgt_threads']} --genome {{input.reference}} --reads {{input.aligned}} --repeats {{input.repeats}} --output-prefix {DATA_DIR}/aligned/{{wildcards.sample}} 2> {{log}}"

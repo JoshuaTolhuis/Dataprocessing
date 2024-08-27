@@ -14,14 +14,17 @@ rule pbmerge:
 
     message:
         "merges the fail and HIFI files"
-
+    
     output:
         f"{DATA_DIR}/merging/{{sample}}.bam"
-
+        
     log:
         f"{DATA_DIR}/logs/{{sample}}.log"
-
+    
+    
     shell:
-        "pbmerge {input.hifi} {input.fail} > {output}"
-    # pbmerge 1.bam 2.bam 3.bam ... > output.bam
+        '''
+        pbmerge {input.hifi} {input.fail} >> {output} 2> {log}
+        '''
+        #pbmerge 1.bam 2.bam 3.bam ... > output.bam
 

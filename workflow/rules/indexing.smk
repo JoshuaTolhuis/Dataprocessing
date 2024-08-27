@@ -24,7 +24,7 @@ rule indexing:
 
     shell:
         """
-        samtools index {input.sorted_spanning}
-        bcftools index {input.sorted_vcf}
+        samtools index {input.sorted_spanning} 2> {log}
+        bcftools index {input.sorted_vcf} 2> {log}
         """
 

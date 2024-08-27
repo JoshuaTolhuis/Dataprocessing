@@ -31,4 +31,4 @@ rule trvz:
         f"{DATA_DIR}/logs/{{sample}}.log"
 
     shell:
-        f"trvz --genome {{input.reference}} --repeats {{input.repeats}} --vcf {{input.vcf}} --spanning-reads {{input.spanning}} --repeat-id {config['repeat_id']} --image {{output}}"
+        f"trvz --genome {{input.reference}} --repeats {{input.repeats}} --vcf {{input.vcf}} --spanning-reads {{input.spanning}} --repeat-id {config['repeat_id']} --image {{output}} 2> {{log}}"

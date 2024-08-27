@@ -12,12 +12,12 @@ rule pbmm2_align:
         "aligning the demuxed files"
 
     input:
-        reference=f"{DATA_DIR}/{config['genome']}",
-        query=rules.pbmerge.output
+        reference = f"{DATA_DIR}/{config['genome']}",
+        query = rules.pbmerge.output
 
     output:
         f"{DATA_DIR}/aligned/{{sample}}.aligned.bam"
-
+        
     log:
         f"{DATA_DIR}/aligned/{{sample}}.log"
 
@@ -25,7 +25,7 @@ rule pbmm2_align:
     #    preset="CCS", # SUBREAD, CCS, HIFI, ISOSEQ, UNROLLED
     #    sample="", # sample name for @RG header
     #    extra="--sort", # optional additional args
-    #    loglevel="INFO"
+    #    loglevel="INFO"    
 
     #conda:
     #    "../envs/pbmm2_align.yaml"
@@ -34,4 +34,4 @@ rule pbmm2_align:
     #    "v1.14.99/bio/pbmm2/align"
 
     shell:
-        f"pbmm2 align {{input.reference}} {{input.query}} {{output}} --sort -j {config['threads']} -J {config['sort_threads']}"
+        f"pbmm2 align {{input.reference}} {{input.query}} {{output}} --sort -j {config['threads']} -J {config['sort_threads']} 2> {{log}}"
