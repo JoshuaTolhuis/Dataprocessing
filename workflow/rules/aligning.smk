@@ -8,21 +8,30 @@ rule pbmm2_align:
     output: aligned .bam file
     """
 
-    input:
-        merged = rules.pbmerge.output,
-        reference = f"{DATA_DIR}/{config['genome']}"
-
     message:
         "aligning the demuxed files"
+
+    input:
+        reference=f"{DATA_DIR}/{config['genome']}",
+        query=rules.pbmerge.output
 
     output:
         f"{DATA_DIR}/aligned/{{sample}}.aligned.bam"
 
-    threads: 
-        2
-
     log:
-        f"{DATA_DIR}/logs/{{sample}}.log"
-        
+        f"{DATA_DIR}/aligned/{{sample}}.log"
+
+    #params:
+    #    preset="CCS", # SUBREAD, CCS, HIFI, ISOSEQ, UNROLLED
+    #    sample="", # sample name for @RG header
+    #    extra="--sort", # optional additional args
+    #    loglevel="INFO"
+
+    #conda:
+    #    "../envs/pbmm2_align.yaml"
+
+    #wrapper:
+    #    "v1.14.99/bio/pbmm2/align"
+
     shell:
-        "pbmm2 align {input.reference} {input.merged} {output} --sort -j 12 -J {threads}"
+        f"pbmm2 align {{input.reference}} {{input.query}} {{output}} --sort -j {config['threads']} -J {config['sort_threads']}"

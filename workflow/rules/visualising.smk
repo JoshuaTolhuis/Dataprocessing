@@ -27,11 +27,8 @@ rule trvz:
     output:
         f"{config['results_directory']}/{{sample}}.svg"
 
-    params:
-        repeat_id = "DMPK"
-
     log:
         f"{DATA_DIR}/logs/{{sample}}.log"
 
     shell:
-        "trvz --genome {input.reference} --repeats {input.repeats} --vcf {input.vcf} --spanning-reads {input.spanning} --repeat-id {params.repeat_id} --image {output}"
+        f"trvz --genome {{input.reference}} --repeats {{input.repeats}} --vcf {{input.vcf}} --spanning-reads {{input.spanning}} --repeat-id {config['repeat_id']} --image {{output}}"

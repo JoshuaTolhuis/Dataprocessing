@@ -22,11 +22,9 @@ rule indexing:
     log:
         f"{DATA_DIR}/logs/{{sample}}"
 
-    conda:
-        "envs/calling.yaml"
-    
     shell:
         """
         samtools index {input.sorted_spanning}
         bcftools index {input.sorted_vcf}
         """
+

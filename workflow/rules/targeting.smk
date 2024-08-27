@@ -23,11 +23,11 @@ rule trgt:
         vcf = f"{DATA_DIR}/aligned/{{sample}}.vcf.gz",
         spanning = f"{DATA_DIR}/aligned/{{sample}}.spanning.bam"
 
-    threads:
-        12
+    params:
+        repeat_id = "DMPK"
 
     log:
         f"{DATA_DIR}/logs/{{sample}}.log"
 
     shell:
-        "trgt --threads {threads} --genome {input.reference} --reads {input.aligned} --repeats {input.repeats} --output-prefix " + f" {DATA_DIR}/aligned/{{wildcards.sample}}"
+        f"trgt --threads {config['trgt_threads']} --genome {{input.reference}} --reads {{input.aligned}} --repeats {{input.repeats}} --output-prefix {DATA_DIR}/aligned/{{wildcards.sample}}"
