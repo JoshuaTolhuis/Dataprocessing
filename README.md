@@ -35,5 +35,11 @@ snakemake --cores <cores>
 conda install -c conda-forge -c bioconda <package>
 ```
 
+## Config
+It is possible to alter the settings of the pipeline tools by using the "config.yaml" file.
+You can change the directory for the data and results in their respective variable called data-, and results- directory.
+To configure another reference genome, repeats and barcode file. please use the corresponding variable within the config file.
+Lastly use the repeat_id to change the repeat you want visualised in the resulting images.
+
 ## Dag.png
 ![image](https://github.com/JoshuaTolhuis/Dataprocessing/assets/90695997/063ae4f3-1b16-4bdb-b3c3-297107937337)
