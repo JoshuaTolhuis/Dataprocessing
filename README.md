@@ -36,10 +36,19 @@ conda install -c conda-forge -c bioconda <package>
 ```
 
 ## Config
-It is possible to alter the settings of the pipeline tools by using the "config.yaml" file.
-You can change the directory for the data and results in their respective variable called data-, and results- directory.
-To configure another reference genome, repeats and barcode file. please use the corresponding variable within the config file.
-Lastly use the repeat_id to change the repeat you want visualised in the resulting images.
+It is possible to alter the settings of the pipeline tools by using the "config.yaml" file.  
+You can change the directory for the data and results in their respective variable called data-, and results- directory.  
+To configure another reference genome, repeats and barcode file. please use the corresponding variable within the config file.  
+Lastly use the repeat_id to change the repeat you want visualised in the resulting images.  
+
+The aligning tool uses several threads to compute but are very specific in their use.
+
+For altering the threading, please dont use more than 8 sorting threads. This will cause IO disk pressure according to the pbmm2 tool's usage description found here:  
+[link](https://github.com/PacificBiosciences/pbmm2)
+
+It is also advised to use a 25% basis for the thread to sorting thread ratio. For example 12 threads and 3 sorting threads.
+
+Targeting threads are only for the computing done by the trgt tool, and have no limitations
 
 ## Dag.png
 ![image](https://github.com/JoshuaTolhuis/Dataprocessing/assets/90695997/063ae4f3-1b16-4bdb-b3c3-297107937337)
